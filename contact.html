@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+   <title>Contacts</title>
+   <link rel="stylesheet" href="css/style.css" />
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- added for legacy support such as IE 8 or earlier -->
+   <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+   <![endif]-->
+   <meta property="og:url"           content="http://battleofwaterlooregion.com/index.html" />
+   <meta property="og:type"          content="website" />
+   <meta property="og:title"         content="Home of Waterloo Region" />
+   <meta property="og:description"   content="Waterloo Region is a Canadian region located in southern Ontario. It is composed of three cities: Kitchener, Waterloo, and Cambridge. It is also made up of four townships: Wellesley, Wilmot, Woolwich, and North Dumfries." />
+   <meta property="og:image"         content="http://http://battleofwaterlooregion.com/images/2.jpg" />
+</head>
+
+<body>
+  <div id="fb-root"></div>
+   <script>(function(d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) return;
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));</script>
+
+<nav>
+<ul class="c" id="myTopnav">
+   <li class="left"><a href="index.html">Waterloo Region</a></li>
+   <li class="right"><a href="contact.html">Contact</a></li>
+    <li class="dropdown">
+      <a href="townships.html" class="dropbtn">Townships</a>
+         <div class="dropdown-content">
+            <a href="townships.html#north">North Dumfries</a>
+            <a href="townships.html#wellesley">Wellesley</a>
+            <a href="townships.html#wilmot">Wilmot</a>
+            <a href="townships.html#woolwich">Woolwich</a>
+         </div>
+   </li>
+   <li class="right"><a href="waterloo.html">Waterloo</a></li>
+   <li class="right"><a href="kitchener.html">Kitchener</a></li>
+   <li class="right"><a href="cambridge.html">Cambridge</a></li>
+   <li class="icon">
+     <a href="javascript:void(0);" onclick="myFunction()">☰</a>
+</ul>
+</nav>
+<br>
+<section class="flex-container">
+
+<div class="leftside">
+<a class="twitter-timeline"
+   href="https://twitter.com/RegionWaterloo"
+   data-width="350"
+   data-height="350">
+   Tweets by RegionWaterloo</a>
+</div>
+
+<form name="myform" id="myform" class="rightside" method="post">
+  <h1>Email Us</h1>
+  <!--h3>The form is still not functional. For questions, contact prime_cut12@hotmail.com.</h3-->
+  <p id="mynamehint" class="hint"></p>
+   <label for="fname">First name: *</label><br />
+   <input type="text" name="fname" id="fname" required="required" title="Type first name"><br />
+
+   <label for="lname">Last name: *</label><br />
+   <input type="text" name="lastname" id="lname" required="required" title="Type last name"><br />
+
+   <label for="email">Email: *</label><br />
+   <input type="email" name="email" id="email" required="required" title="Enter email address"><br />
+
+   <label for="phone">Phone:</label><br />
+   <input type="phone" name="phone" id="phone" title="Type phone number" pattern="\d{3}[\-]\d{3}[\-]\d{4}" /><br />
+
+   <label for="message">Message: *</label><br />
+   <textarea name="message" id="message" required="required" title="Write a message"></textarea><br /><br />
+   <input type="submit" value="Submit"/><br />
+</form>
+</section>
+<footer>By Chou Khamkeuang. Last date modified: November 22, 2016. <div class="fb-like"
+     data-href="http://battleofwaterlooregion.com/"
+     data-layout="button_count" data-action="like"
+     data-size="small"
+     data-show-faces="false"
+     data-share="true">
+  </div>
+</footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-87680009-1', 'auto');
+  ga('send', 'pageview');
+
+
+</script>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="js/validation.js"></script>
+</body>
+</html>

@@ -1,0 +1,1013 @@
+/*--------------------body settings ------------------------------*/
+body {
+   font-size: 100%;
+   margin: 0;
+   padding: 0;
+}
+/* This allows padding and margin to be included in width and height so that the page doesn't go off and shows a scroll bar*/
+* {
+    box-sizing: border-box;
+}
+
+/*-----------------image settings -----------------------------------------*/
+img   {
+   max-width: 100%;
+   height: auto;
+}
+/* --Setings for main content --------------------------------------------------*/
+/*-----------------content settings -----------------------------------------*/
+.content   {
+   text-align: center; /* The text-align property specifies the horizontal alignment of text in an element. */
+   height: 100%;
+   padding: 40px 20%;
+   margin-bottom: 0px;
+}
+
+/* --------- paragraph settings --------------------*/
+p   {
+   text-align: left;
+   font-size: 16px;
+   font-family: "Helvetica, Helvetica Neue, Arial";
+}
+
+h1 {
+  font-family: "Helvetica, Helvetica Neue, Arial";
+  font-size: 30px;
+}
+h2 {
+  font-family: "Helvetica, Helvetica Neue, Arial";
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  height: 50px;
+  padding-top: 15px;
+  position: relative;
+}
+
+#para1 {
+  text-align: center;
+}
+
+#para2 {
+  text-align: center;
+  font-size: 22px;
+  line-height: 1.8;
+}
+
+#para3 {
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.8;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  /* padding: auto; */
+}
+
+/* --Setings for navigation bar --------------------------------------------------*/
+/* some of the codes are from the w3schools instructions on "Create A Responsive Topnav" http://www.w3schools.com/howto/howto_js_topnav.asp */
+ul.c {
+   list-style-type: none; /* Removes the bullets */
+   margin: 0; /* Removes browser default settings */
+   padding: 0; /* Removes browser default settings */
+   width: 100%; /* makes horizontal navigation bar expand to 100% of the width */
+   height: auto;
+   background-color: #333; /* color for navigation bar*/
+   position: fixed; /* makes navigation bar fixed so when scrolling it doens't move*/
+   overflow: hidden;
+   top: 0;
+   font-weight: 900; /* makes fonts bolder*/
+   z-index:3; /* allows images from below website when scrolling to go behind the navigation bar*/
+}
+
+li.left   {
+   float: left;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 1.375em; /* 22px*/
+}
+
+/*for navigation bar which moves menu options to the right */
+li.right   {
+   float: right;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 1.375em; /* 22px*/
+}
+
+
+/* Styles the <a> element inside the list. Slso styles the .dropbtn inside the list*/
+li a {
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 14px 18px;
+   text-decoration: none;
+}
+
+li.dropbtn {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 18px;
+  text-decoration: none;
+}
+
+/* Changes the link color on hover, and dropdown hover and the drop button. */
+li a:hover, .dropdown:hover, .dropbtn:hover  {
+   background-color: yellow;
+   color: black;
+}
+/* this will hide the hamburger icon in navbar */
+li.icon {
+  display: none;
+  font-size: 20px;
+}
+
+/* needed when we want the dropdown content to be placed right below the dropdown button */
+li.dropdown {
+
+   display: block;
+   float: right;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 1.375em; /* 22px*/
+}
+
+/* Defines the content that is displayed in the dropdown */
+/* .dropdown-content class holds the actual dropdown content */
+.dropdown-content {
+   display: none;
+   position: fixed; /*change position to fixed to keep drop down normal with navigation bar fixed */
+   background-color: yellow;
+   min-width: 8.9375em;
+}
+
+/*Settings for dropdown-content links */
+.dropdown-content a {
+   color: black; /* font color */
+   padding: 0.75em 1em;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+}
+
+/*This is for the setting when dropping down the menu, when hovering the options the fonts turn yellow and background color is black*/
+.dropdown-content a:hover {
+   background-color: black;
+   color: yellow;
+}
+
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+
+#active {
+   background-color: yellow;
+   color: black;
+}
+
+/* -------------------------end of navigation bar settings ----------------------------------------- */
+/*this is for the text in the image of the center at the top*/
+.container {
+   position: relative;
+}
+
+/* for positioning text in image */
+.center   {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   text-align: center;
+   transform: translate(-50%, -50%);
+   font-size: 5em;
+   text-shadow: 0.025em 0.025em black;
+   color: white;
+   font-weight: 900;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.center2   {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   text-align: center;
+   transform: translate(-50%, -50%);
+   font-size: 5em;
+   text-shadow: 0.025em 0.025em black;
+   color: white;
+   font-weight: 900;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+#center {
+  text-align: center;
+}
+/* -------------------------slideshow ----------------------------------------- */
+/* slideshow codes were copied from w3schools.com - http://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow with some adjustments. I removed the max-width from the slideshow-container and removed the dots.*/
+.slideshow-container {
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* -----form --------------------------------------------------------*/
+/* copied from w3schools website */
+
+#columns {
+  overflow: auto;
+}
+
+.flex-container {
+   display: -webkit-flex;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+form   {
+   position: relative;
+   top: 40px;
+   height: 1200px;
+   overflow-x: hidden;
+ }
+
+.leftside {
+ }
+
+.rightside {
+ }
+
+ input[type=text], input[type=email], input[type=phone] {
+   display: block;
+   width: 600px;
+   padding: 12px 20px;
+   border: 1px solid #ccc; /* border property changes border size and color */
+   outline: none;
+   border-radius: 4px; /* border-radius adds rounded corners */
+   box-sizing: border-box; /* box sizing: border-box allows for a box to be the same width and heigh and within it include the value of padding */
+ }
+
+/* changes colors of field boxes when clicking on them */
+ input[type=text]:focus, input[type=email]:focus, input[type=phone]:focus, textarea:focus {
+   border: solid black;
+ }
+
+/* source: http://www.w3schools.com/css/tryit.asp?filename=trycss_form_textarea */
+textarea {
+    display: block;
+    width: 600px;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: both;
+}
+
+input[type=submit] {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+}
+
+input[type=submit]:hover {
+  background-color: yellow;
+  color: black;
+}
+
+.hint {
+  color: red;
+}
+/* ----IDs for javascript ----------------------------------------------------------------------------------*/
+/* Determines the size of the map on the website by using width and height*/
+#googlemap {
+  width: 100%;
+  height: 500px;
+}
+
+#kitchener {
+  width: 100%;
+  height: 500px;
+}
+
+#cambridge {
+  width: 100%;
+  height: 500px;
+}
+
+#waterloo {
+  width: 100%;
+  height: 500px;
+}
+
+/* -----parallax scrolling --------------------------------------------------------*/
+#intro {
+}
+
+.project {
+    text-align: center;
+    /*padding: 200px 0; controls space around text */
+    border-bottom: 1px #ebebeb solid;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+}
+
+.project.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#project01 {
+  padding: 50px 0;
+}
+
+#project01 h2 {
+  color: black;
+}
+
+#main {
+  position: relative;
+  background-color: #FFF;
+}
+
+.bcg-parralax {
+  padding: 250px 0; /*makes background image bigger */
+  color: white;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg {
+  background: url("../images/garden4.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 140%;
+  top: 0;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.bcg-parralax2 {
+  padding: 250px 0; /*makes background image bigger */
+  color: black;
+  background-color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg2 {
+  background: url("../images/kitchener_streets.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 140%;
+  top: 0;
+  z-index: 1;
+}
+
+.content-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.content-wrapper2 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.bcg-parralax3 {
+  padding: 250px 0;
+  color: white;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg3 {
+  background: url("../images/cambridge_butterfly.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 140%;
+  top: 0;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.content-wrapper3 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.bcg-parralax4 {
+  padding: 150px 0;
+  color: white;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg4 {
+  background: url("../images/cambridge_wall2.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  top: 0;
+  z-index: 1;
+}
+
+.content-wrapper4 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.bcg-parralax5 {
+  padding: 300px 0;
+  color: white;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg5 {
+  background: url("../images/victoria3.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  top: 0;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.content-wrapper5 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.bcg-parralax6 {
+  padding: 200px 0;
+  color: white;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg6 {
+  background: url("../images/kitchener_farmer.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  top: 0;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.content-wrapper6 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.bcg-parralax7 {
+  padding: 400px 0;
+  color: white;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg7 {
+  background: url("../images/garden2.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  top: 0;
+  z-index: 1;
+}
+
+.content-wrapper7 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.bcg-parralax8 {
+  padding: 400px 0;
+  color: black;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg8 {
+  background: url("../images/waterloo_prime_minister.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  top: 0;
+  z-index: 1;
+}
+
+.content-wrapper8 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.bcg-parralax9 {
+  padding: 200px 0;
+  color: black;
+  background-color: white;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg9 {
+  background: url("../images/waterloo_perimeter.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  top: 0;
+  z-index: 1;
+}
+
+.content-wrapper9 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.bcg-parralax10 {
+  padding: 400px 0;
+  color: white;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg10 {
+  background: url("../images/waterloo4.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  top: 0;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.content-wrapper10 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.bcg-parralax11 {
+  padding: 300px 0;
+  color: white;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg11 {
+  background: url("../images/farm.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  top: 0;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.content-wrapper11 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.bcg-parralax12 {
+  padding: 150px 0;
+  color: white;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg12 {
+  background: url("../images/st_jacobs.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  top: 0;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.content-wrapper12 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.bcg-parralax13 {
+  padding: 200px 0;
+  color: white;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg13 {
+  background: url("../images/wellesley_cider.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  top: 0;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.content-wrapper13 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+
+.bcg-parralax14 {
+  padding: 400px 0;
+  color: white;
+  background-color: black;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bcg14 {
+  background: url("../images/shantz_farm.jpg") no-repeat;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  height: 130%;
+  top: 0;
+  z-index: 1;
+  opacity: 0.7;
+}
+
+.content-wrapper14 {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1140px;
+  position: relative;
+  z-index: 2;
+}
+/* -----------------------------media queries for 1100px----------------------------------------------------------------*/
+@media only screen and (max-width: 1100px) {
+  form   {
+    height: 1050px;
+   }
+
+   input[type=text], input[type=email], input[type=phone] {
+     width: 800px;
+   }
+}
+
+/* -----------------------------media queries for 890px----------------------------------------------------------------*/
+@media only screen and (max-width: 890px) {
+/* if commented out the haburger icon is in aligned with the other cities. When youclick on it it doesn't highlight the whole nav bar either just the icon. But when you put it in a small screen the rest of the cities are not hidden. If uncommented the hamburger icon is in the middle and if you highlight it the whole nav bar is highlighted. But if you put it in a small screen the rest of the cities disappear and only showws the icon which is good. but have to fix the other issue */
+ul.c {
+     position: fixed; /* makes navigation bar fixed so when scrolling it doens't move*/
+  }
+
+/* added this line from w3schools on to create hamburger icon. Also uncommented the rest of the other navigation bar settings */
+ul.c li:not(:first-child) {display: none;}
+ul.c li.icon {
+  float:right;
+  display: inline-block;
+}
+
+
+  ul.c.responsive {position: fixed;}
+  ul.c.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 20px;
+  }
+  ul.c.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.c.responsive li a {
+    display: block;
+    text-align: left;
+  }
+
+  ul.c.responsive div.dropdown-content a {
+     display: none;
+  }
+
+
+/* ----------------------------------forms --------------------------------------------------------- */
+form   {
+   margin-left: 100px;
+ }
+
+ input[type=text], input[type=email], input[type=phone] {
+   width: 400px;
+ }
+
+ textarea {
+     width: 400px;
+ }
+
+/* for the settings for content */
+.content   {
+   margin: auto;
+   width: 100%;
+   font-family: Arial, Helvetica, sans-serif;
+   padding: 10px;
+}
+
+/* settings for paragraph */
+p   {
+   text-align: left;
+   font-size: 1.15em;
+}
+
+/* settings for javascript google map need to find settings for mobile on google map apis*/
+#googlemap {
+  width: 100%;
+  height: 500px;
+}
+}
+/* -----------------------------media queries for 700px----------------------------------------------------------------*/
+@media only screen and (max-width: 700px) {
+  .center   {
+     font-size: 3em;
+     text-shadow: 0.025em 0.025em black;
+  }
+}
+
+/* -----------------------------media queries for 522px----------------------------------------------------------------*/
+@media only screen and (max-width: 522px) {
+  .center   {
+     font-size: 2em;
+     text-shadow: 0.025em 0.025em black;
+  }
+
+form   {
+   top: 30px;
+   margin-left: 10px;
+ }
+
+ input[type=text], input[type=email], input[type=phone] {
+   width: 400px;
+ }
+
+ textarea {
+     resize: none;
+    }
+ }
+/* -----------------------------media queries for 480px----------------------------------------------------------------*/
+
+@media only screen and (max-width: 480px) {
+
+.center   {
+   font-size: 2em;
+   text-shadow: 0.025em 0.025em black;
+}
+
+.center2   {
+   top: 65%;
+   font-size: 2em;
+   text-shadow: 0.025em 0.025em black;
+}
+
+form   {
+   top: 30px;
+   margin-left: 10px;
+ }
+
+input[type=text], input[type=email], input[type=phone] {
+   width: 350px;
+ }
+
+textarea {
+   width: 350px;
+ }
+
+footer {
+  height: 75px;
+}
+
+.bcg-parralax4 {
+  padding: 100px 0;
+  text-shadow: 0.5px 0.5px  black;
+}
+
+.bcg4 {
+  background: url("../images/cambridge_wall2b.jpg") no-repeat;
+  background-size: cover;
+}
+
+.bcg-parralax5 {
+  padding: 100px 0;
+}
+
+.bcg5 {
+  background: url("../images/victoria3b.jpg") no-repeat;
+  background-size: cover;
+}
+
+.bcg-parralax6 {
+  padding: 100px 0;
+
+}
+
+.bcg-parralax7 {
+  padding: 100px 0;
+}
+
+.bcg7 {
+  background: url("../images/garden2.jpg") no-repeat;
+  background-size: cover;
+}
+
+.bcg8 {
+  background: url("../images/waterloo_prime_minister3.jpg") no-repeat;
+}
+
+.bcg-parralax8 {
+  height: 800px;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.bcg-parralax9 {
+  padding: 25px 0;
+  color: black;
+  text-shadow: 1px 1px white;
+  height: 760px;
+}
+
+.bcg9 {
+  background: url("../images/waterloo_perimeter2.jpg") no-repeat;
+}
+
+.content-wrapper9 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bcg-parralax10 {
+  height: 760px;
+  padding: 100px 0;
+}
+
+.bcg10 {
+  background: url("../images/waterloo4b.jpg") no-repeat;
+  text-shadow: 1px 1px black;
+}
+
+.content-wrapper10 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.bcg-parralax11 {
+  padding: 100px 0;
+}
+
+
+.bcg12 {
+  background: url("../images/st_jacobs2.jpg") no-repeat;
+  background-size: cover;
+  text-shadow: 0.5px 0.5px  black;
+
+}
+
+.bcg-parralax13 {
+  text-shadow: 0.5px 0.5px  black;
+}
+
+.bcg13 {
+  background: url("../images/wellesley_cider2.jpg") no-repeat;
+}
+
+.bcg-parralax14 {
+  padding: 200px 0;
+}
+
+#para3 {
+  font-size: 26px;
+}
+
+.container {
+  top: 30px;
+}
+
+.flex-container {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.leftside {
+   margin-top: 30px;
+ }
+}

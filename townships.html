@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+   <title>Cities of Waterloo Region Home</title>
+   <link rel="stylesheet" href="css/style.css" />
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- added for legacy support such as IE 8 or earlier -->
+   <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+   <![endif]-->
+   <meta property="og:url"           content="http://battleofwaterlooregion.com/index.html" />
+   <meta property="og:type"          content="website" />
+   <meta property="og:title"         content="Home of Waterloo Region" />
+   <meta property="og:description"   content="Waterloo Region is a Canadian region located in southern Ontario. It is composed of three cities: Kitchener, Waterloo, and Cambridge. It is also made up of four townships: Wellesley, Wilmot, Woolwich, and North Dumfries." />
+   <meta property="og:image"         content="http://battleofwaterlooregion.com/images/2.jpg" />
+</head>
+<body>
+<nav>
+<ul class="c" id="myTopnav">
+   <li class="left"><a href="index.html">Waterloo Region</a></li>
+   <li class="right"><a href="contact.html">Contact</a></li>
+    <li class="dropdown">
+      <a href="townships.html" class="dropbtn">Townships</a>
+         <div class="dropdown-content">
+            <a href="#north">North Dumfries</a>
+            <a href="#wellesley">Wellesley</a>
+            <a href="#wilmot">Wilmot</a>
+            <a href="#woolwich">Woolwich</a>
+         </div>
+   </li>
+   <li class="right"><a href="waterloo.html">Waterloo</a></li>
+   <li class="right"><a href="kitchener.html">Kitchener</a></li>
+   <li class="right"><a href="cambridge.html">Cambridge</a></li>
+   <li class="icon">
+     <a href="javascript:void(0);" onclick="myFunction()">☰</a>
+</ul>
+</nav>
+<div class="container">
+   <img src="images/wellesley.jpg" alt="Wellesley Apple Butter Festival 2016" />
+   <div class="center">Townships of Waterloo Region</div>
+</div>
+
+<section>
+   <div id="main" class="content">
+      <div id="project01" class="project">
+      <h1>ABOUT</h1>
+      <p id="para2">The four townships are composed of small towns. Here you will find the country side of the region. It's a different lifestyle if you drive through the townships. It's a different pace.</p>
+      </div>
+   </div>
+
+<div id="googlemap"></div>
+
+<div class="bcg-parralax11">
+  <div class="bcg11"></div>
+  <div id="north" class="content-wrapper11">
+      <h1>If you want to learn more about produce, legumes, meats, dairy, and so on North Dumfries is the place to be.</h1>
+   </div>
+</div>
+
+<div class="bcg-parralax12">
+  <div class="bcg12"></div>
+  <div id="woolwich" class="content-wrapper12">
+      <p id="para3">Township of Woolwich is famous for Elmira's Maple Syrup Festival, St-Jacobs Farmer's Market, and is where the Waterloo Region Airport is located.</p>
+   </div>
+</div>
+
+<div class="bcg-parralax13">
+  <div class="bcg13"></div>
+  <div id="wellesley" class="content-wrapper13">
+      <p id="para3">The Township of Wellesley is famous for their Apple cider and Apple Butter Festival.</p>
+   </div>
+</div>
+
+<div class="bcg-parralax14">
+  <div class="bcg14"></div>
+  <div id="wilmot" class="content-wrapper14">
+      <p id="para3">Every fall visit the Shantz Family Farm located in the Township of Wilmot where you'll enjoy straw maze, wagon rides, and pumpkins.</p>
+   </div>
+</div>
+</section>
+
+ <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+<footer>
+   By Chou Khamkeuang. Last date modified: November 22, 2016. <div class="fb-like"
+     data-href="http://battleofwaterlooregion.com/"
+     data-layout="button_count" data-action="like"
+     data-size="small"
+     data-show-faces="false"
+     data-share="true">
+  </div>
+</footer>
+<script>window.jQuery || document.write('<script src="js/jquery-3.1.1.min.js"><\/script>')</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7jUOqY_ruCVXkfaYaAJ0IvcP8YgXF0aA&callback=initMap"
+    async defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+<script src="js/ScrollMagic.min.js"></script>
+<script src="js/animation.gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-87680009-1', 'auto');
+  ga('send', 'pageview');
+
+
+</script>
+<script src="js/lax.js"></script>
+<script src="js/javascript.js"></script>
+</body>
+</html>
